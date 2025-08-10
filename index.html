@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sorabh Manchanda — Portfolio</title>
+<style>
+:root{
+  --bg:#0b1221; --panel:#121a2b; --text:#eaf2ff; --muted:#a8b3cf; --accent:#5eead4; --ring: rgba(94,234,212,.28);
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#64748b; --accent:#10b981; --ring: rgba(16,185,129,.22); }
+}
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg); color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+a{ color:inherit }
+header{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(10px);
+        background:color-mix(in srgb, var(--bg) 78%, transparent);
+        border-bottom:1px solid color-mix(in srgb, var(--text) 10%, transparent); }
+.container{ max-width:1100px; margin:0 auto; padding:20px; }
+.nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.brand{ display:flex; align-items:center; gap:10px; font-weight:700; }
+.dot{ width:10px; height:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 6px var(--ring); }
+.links a{ color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:10px; }
+.links a:hover{ color:var(--text); background:color-mix(in srgb, var(--accent) 16%, transparent); }
+/* Hero */
+.hero{ text-align:center; padding:70px 20px 40px; }
+.avatar{ width:120px; height:120px; border-radius:24px; object-fit:cover;
+         display:block; margin:0 auto 16px; border:4px solid color-mix(in srgb, var(--panel) 70%, transparent);
+         box-shadow:0 30px 80px var(--ring); }
+h1{ margin:8px 0; font-size:42px; line-height:1.1; }
+.lead{ color:var(--muted); max-width:760px; margin:0 auto; font-size:18px; }
+.actions{ display:flex; gap:12px; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+.btn{ padding:10px 14px; border-radius:12px; border:1px solid color-mix(in srgb, var(--text) 12%, transparent);
+      background:linear-gradient(180deg, color-mix(in srgb, var(--panel) 40%, transparent), var(--panel));
+      text-decoration:none; font-weight:600; }
+.btn.primary{ background:linear-gradient(180deg, color-mix(in srgb, var(--accent) 35%, transparent), var(--accent)); border-color:transparent; }
+.btn:hover{ filter:brightness(1.05); transform:translateY(-1px); transition:.15s; }
+/* Sections */
+section{ padding:44px 20px; }
+.title{ font-size:22px; margin:0 0 18px; letter-spacing:.3px; }
+.grid{ display:grid; gap:16px; grid-template-columns:repeat(12,1fr); }
+.card{ grid-column:span 12; background:var(--panel);
+       border:1px solid color-mix(in srgb, var(--text) 12%, transparent);
+       border-radius:18px; padding:18px; box-shadow:0 10px 30px var(--ring); text-decoration:none; }
+@media (min-width:760px){ .third{ grid-column:span 4; } .half{ grid-column:span 6; } }
+.muted{ color:var(--muted); font-size:14px; }
+.tag{ display:inline-block; padding:4px 8px; border-radius:999px; font-size:12px; margin:6px 6px 0 0;
+      background:color-mix(in srgb, var(--accent) 22%, transparent); }
+.chips{ margin-top:6px }
+/* Resume block */
+.resume-wrap{ display:flex; justify-content:center; }
+.resume{ width:min(820px, 92vw); background:#0b122155; padding:12px; border-radius:16px;
+         border:1px solid color-mix(in srgb, var(--text) 14%, transparent); box-shadow:0 25px 80px var(--ring); }
+.resume object{ width:100%; height:min(1000px, 80vh); border:0; border-radius:12px; background:#fff; }
+.note{ text-align:center; color:var(--muted); font-size:13px; margin-top:8px; }
+footer{ text-align:center; color:var(--muted); padding:28px 0 40px; font-size:14px; }
+/* Narrative page */
+.narrative{ max-width:880px; margin:0 auto; }
+.narrative p{ color:var(--text); }
+.narrative .aside{ color:var(--muted); font-size:14px; margin-top:4px; }
+.narrative h2{ font-size:20px; margin:22px 0 10px; }
+ul{ padding-left:20px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand"><span class="dot"></span> Sorabh Manchanda</div>
+    <nav class="links">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <section class="hero">
+    <img class="avatar" src="avatar.jpg" alt="Avatar" onerror="this.style.display='none'">
+    <h1>Hello, I’m Sorabh.</h1>
+    <p class="lead">Program Manager in Supply Chain & Logistics. I design transportation networks, automate ops, and ship optimization into production systems for e-commerce and 3PLs.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">Explore my work</a>
+      <a class="btn" href="https://www.linkedin.com/in/sorabhmanchanda/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="#resume">View Resume</a>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2 class="title">Work Highlights</h2>
+    <div class="grid"><div class="card third"><h3>Flipkart — Supply Chain Design</h3><p class="muted">Network redesign, linehaul optimization, last-mile beat planning, and routing automation.</p><div class="chips"><span class='tag'>Network Design</span> <span class='tag'>Linehaul</span> <span class='tag'>Routing</span></div></div><div class="card third"><h3>Shadowfax — Control Tower</h3><p class="muted">S&OP for peak, demand forecasting, capacity planning, and TMS master scheduling.</p><div class="chips"><span class='tag'>S&OP</span> <span class='tag'>Capacity Planning</span> <span class='tag'>TMS</span></div></div><div class="card third"><h3>Delhivery — Network Design</h3><p class="muted">Intercity route automation, site launches, and cross-system integration (TMS/ERP/WMS).</p><div class="chips"><span class='tag'>Automation</span> <span class='tag'>Systems</span> <span class='tag'>Ops</span></div></div></div>
+  </section>
+
+  <section id="projects">
+    <h2 class="title">Projects</h2>
+    <p class="muted">Grouped by company; click to read the narrative.</p>
+  </section>
+  
+      <section id="projects-flipkart">
+        <h2 class="title">Flipkart Projects</h2>
+        <p class="muted">Program Manager — Linehaul & Network Design</p>
+        <div class="grid">
+          <a class="card half" href="projects/round-circuit-design-flipkart.html">
+            <h3>Round Circuit Design</h3>
+            <p class="muted">Closed-loop MH–DH circuits to reduce empty miles and align dispatch to cutoffs.</p>
+            <div class="chips"><span class='tag'>VRP</span> <span class='tag'>Heuristics</span> <span class='tag'>Shift Planning</span> <span class='tag'>TMS Integration</span></div>
+          </a>
+        
+          <a class="card half" href="projects/50-ft-containerization-national-linehaul-redesign-flipkart.html">
+            <h3>50-ft Containerization — National Linehaul Redesign</h3>
+            <p class="muted">Migrated trunk network to 50‑ft containers; consolidated trips and saved ~₹3.6 Cr/month in 4 months.</p>
+            <div class="chips"><span class='tag'>Containerization</span> <span class='tag'>Network Modeling</span> <span class='tag'>Dock Planning</span></div>
+          </a>
+        
+          <a class="card half" href="projects/last-mile-beat-optimizer-hyperlocal-flipkart.html">
+            <h3>Last-Mile Beat Optimizer (Hyperlocal)</h3>
+            <p class="muted">Beat design engine lowered vehicle cost/GMV to 4.5% and improved on‑time fulfillment.</p>
+            <div class="chips"><span class='tag'>Clustering</span> <span class='tag'>VRP with Time Windows</span> <span class='tag'>Zoning</span></div>
+          </a>
+        
+          <a class="card half" href="projects/fc-dark-store-flow-flipkart-minutes-flipkart.html">
+            <h3>FC → Dark Store Flow (Flipkart Minutes)</h3>
+            <p class="muted">Dock slotting + shift allocation + routing automation for FC→Dark Store replenishment.</p>
+            <div class="chips"><span class='tag'>Dock Scheduling</span> <span class='tag'>Routing</span> <span class='tag'>Workforce Planning</span> <span class='tag'>TMS</span></div>
+          </a>
+        </div>
+      </section>
+    
+      <section id="projects-shadowfax">
+        <h2 class="title">Shadowfax Projects</h2>
+        <p class="muted">Program Manager — Control Tower</p>
+        <div class="grid">
+          <a class="card half" href="projects/peak-network-optimization-diwali-planning-shadowfax.html">
+            <h3>Peak Network Optimization (Diwali planning)</h3>
+            <p class="muted">A five‑month peak plan with temporary cross‑docks and capacity locks cut ad‑hoc costs by 18%.</p>
+            <div class="chips"><span class='tag'>S&OP</span> <span class='tag'>Capacity Planning</span> <span class='tag'>Cross‑dock Design</span></div>
+          </a>
+        </div>
+      </section>
+    
+      <section id="projects-delhivery">
+        <h2 class="title">Delhivery Projects</h2>
+        <p class="muted">Program Manager — Network Design</p>
+        <div class="grid">
+          <a class="card half" href="projects/continuous-connection-direct-loading-delhivery.html">
+            <h3>Continuous Connection (Direct Loading)</h3>
+            <p class="muted">Multi‑run connection logic enabled through‑loading, saving ~39,000 sq.ft of staging and reducing handling cost.</p>
+            <div class="chips"><span class='tag'>Schedule Design</span> <span class='tag'>Dock Flow</span> <span class='tag'>Direct Loading</span></div>
+          </a>
+        
+          <a class="card half" href="projects/automated-intercity-route-planning-delhivery.html">
+            <h3>Automated Intercity Route Planning</h3>
+            <p class="muted">Automation for secondary line‑haul routes improved utilization and plan stability.</p>
+            <div class="chips"><span class='tag'>VRP</span> <span class='tag'>Heuristics</span> <span class='tag'>Volume Forecasting</span></div>
+          </a>
+        
+          <a class="card half" href="projects/new-site-enablement-system-activation-delhivery.html">
+            <h3>New Site Enablement & System Activation</h3>
+            <p class="muted">Credentialing, pin‑to‑warehouse mapping, line‑haul design and grid allocation—wired across TMS/ERP/WMS.</p>
+            <div class="chips"><span class='tag'>TMS/ERP/WMS Integration</span> <span class='tag'>Network Design</span></div>
+          </a>
+        
+          <a class="card half" href="projects/e2e-planning-for-b2b-express-clients-delhivery.html">
+            <h3>E2E Planning for B2B & Express Clients</h3>
+            <p class="muted">Scaled +20 lakh orders/month while holding line‑haul CPS ≈ ₹4.3.</p>
+            <div class="chips"><span class='tag'>S&OP</span> <span class='tag'>Capacity</span> <span class='tag'>Pricing</span> <span class='tag'>SLA Design</span></div>
+          </a>
+        </div>
+      </section>
+    
+
+  <section id="resume">
+    <h2 class="title">Resume</h2>
+    <div class="resume-wrap">
+      <div class="resume">
+        <object data="SorabhManchandaResume-F.pdf" type="application/pdf">
+          <p class="muted">PDF preview not available here. <a href="SorabhManchandaResume-F.pdf">Download the resume</a>.</p>
+        </object>
+        <div class="note">Tip: If the PDF doesn’t show in your browser, click “Download the resume”.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="title">Contact</h2>
+    <div class="grid">
+      <div class="card">
+        <p>Open to roles across Supply Chain, Network Design, and Ops Automation.</p>
+        <p class="muted">Email: <a href="mailto:sorabh.manc26@gmail.com">sorabh.manc26@gmail.com</a> • LinkedIn: <a href="https://www.linkedin.com/in/sorabhmanchanda/" target="_blank" rel="noopener">/in/sorabhmanchanda</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="y"></span> Sorabh Manchanda</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body></html>
